@@ -20,19 +20,19 @@
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 %Some useful environments.
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{axiom}{Axiom}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{corollary}{Corollary}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{axiom}{Axiom}
 \theoremstyle{remark}
-\newtheorem{remark}{Remark}
+\newtheorem*{remark}{Remark}
 \newtheorem*{observation}{Observation}
 \newtheorem*{basic notion}{Basic Notion}
-\newtheorem{fact}{Fact}
+\newtheorem*{fact}{Fact}
 \newtheorem*{exercise}{Exercise}%[section]
 
 %For GeoGebra
@@ -110,51 +110,53 @@
 \begin{observation} Sets of parallel lines converge to a point in an image when they are not parallel to the picture plane. Lines parallel to the picture plane remain parallel.
 \end{observation}
 \begin{basic notion} We have two projection models, the artist and screen, and the camera obscura.\end{basic notion}
-\begin{fact} Parallel lines may be understood as having the same direction vector, as being equidistant from each other at all points, or as not meeting.\end{fact}
+\begin{fact} Parallel lines may be understood as having the same direction vector, as being equidistant from each other at all points, or as not meeting (in 2D).\end{fact}
 \begin{observation} We know of three kinds of perspective drawings of a box... One point, two point, and three point. They are determined by the number of vanishing points the edges of the box have. \end{observation}
-\begin{definition} A \emph{pencil of lines} is either...
+\begin{definition} A \emph{pencil of lines} is a collection of lines that either all pass through the same point or all are parallel to the same line.
 \end{definition} 
 
 We should remember the methods discussed in class for constructing boxes or letters using mathematical perspective methods. Anyone willing to write up their favorite way of completing the letter T?
 
-\begin{observation} The possible images of a point are...
+\begin{observation} The possible images of a point are the empty set, a point, a line and a plane.
 
-The possible images of a line are...
+The possible images of a line are a point, a line and a line with one missing point.
 
-The possible images of a plane are ...
+The possible images of a plane are \ldots
 \end{observation}
 \begin{observation} When thinking about the images of geometric objects it is important to DRAW the lines connecting the objects THROUGH the observation point TO the image plane. It is also important to be GENERIC in placing our objects (unless there is good reason not to).\end{observation}
 \begin{fact} Top and side views are \emph{parallel} projections onto a plane. They are not projections \emph{through a point}.\end{fact}
-\begin{definition} A \emph{ray} is...
+\begin{definition} A \emph{point} is any element of the set space without any dimensional attribute like length, area, volume, \ldots
 \end{definition}
-\begin{definition} A \emph{line segment} is...
+\begin{definition} A \emph{line segment} is the shortest path between two points.
 \end{definition}
-\begin{definition} A \emph{line} is...
+\begin{definition} A \emph{ray} is the shortest path between two points and its infinite extension to one of its two ends.
+\end{definition}
+\begin{definition} A \emph{line} is the shortest connection between two points and its infinite extension to both sides.
 \end{definition}
 \section{Collected Results}
-Euclidean geometry axioms:
+\subsection{Euclidean geometry axioms}
 \begin{description}
 \item[Two points determine a line] A straight line segment can be drawn between two points.
 \item[Line extension] A straight line segment may be extended to a line.
 \item[Line segment determines a circle] Given a line segment a circle may be drawn with the segment as radius, and one endpoint at the center.
 \item[Right angle congruence] All right angles are congruent.
 \item[Playfair's Axiom] Given a line and a point in a plane, the point not incident with the line, there exists a unique line in the plane that is incident with the point but not incident with the line. That is, there is a uinique line in the plane that is parallel to the first line and that passes through the point.
-\item[Measurement] 
-\item[Sum of Lengths]
-\item[Line Segment Copy]
-\item[Transitivity of Congruence]
-\item[SAS]
-\item[SSS]
+\item[Measurement] Define an arbitrary line segment or angle to have unit length or unit angle measurement of 1. Then every other line segment or any other angle has a measurement relative to this unit measurement.
+\item[Sum of Lengths] If $A, B, C$ are in that order along a line, then the sum of the directed distance from $A$ to $B$ and the directed distance from $B$ to $C$ equals the directed distance from  $A$ to $C$. In similarity the same thing applies to angles.
+\item[Line Segment Copy] If  a line segment is defined through $A$ and $B$ and $A'$ is a point on a line $l$, then upon a given side of $A'$ on $l$, there is only one point $B'$ such that the line segment given through $A$ and $B$ is congruent to the line segment given by $A'$ and $B'$. In similarity the same thing applies to angles.
+\item[Transitivity of Congruence] If line segment one and two are congruent are congruent and line segment two and three are congruent, then line segment one and three are congruent. In similarity the same thing applies to angles.
+\item[SAS] For two triangles, if two corresponding sides and the angle between them are congruent, then the triangles are congruent. 
+\item[SSS] For two triangles, if all three corresponding sides are congruent, then the triangles are congruent.
 \end{description}
-Some Euclidean geometry theorems:
+\subsection{Some Euclidean Geometry Theorems}
 \begin{description}
 \item[Sum of Interior Angles] is two right angles.
 \item[Vertical Opposite Angles] If a line is cut by a transversal, then the vertical angles are congruent.
 \item[Alternate Interior Angles] If a pair of lines is cut by a transversal, then the alternate interior angles are congruent.
 \item[Corresponding Angles - $\square$ 4.1.2] If a pair of parallel lines is cut by a transversal, the corresponding angles are congruent.
 \item[Triangle Angle Sum] The sum of the interior angles of a triangle is a straight angle.
-\item[ASA]
-\item[SAA]
+\item[ASA] For two triangles, if two corresponding angles and the side between them are congruent, then the triangles are congruent. 
+\item[SAA] For two triangles, if two corresponding angles and one of the sides not between them are congruent, then the triangles are congruent. 
 \item[SAS similarity] If $\triangle ABC$ and $\triangle DEF$ such that $\angle ABC\cong\angle DEF$ and $\frac{||AB||}{||DE||}=\frac{||BC||}{||EF||}$ then $\triangle ABC\sim\triangle DEF$.
 \item[AAA$\iff\sim\triangle$]
 \end{description}
@@ -165,16 +167,17 @@ Some Euclidean geometry theorems:
 \end{theorem}
 \begin{theorem}[Converse of Ceva's Theorem]
 \end{theorem}
-\begin{theorem}[Menelaus] Let $\triangle ABC$ be a triangle, and let a transversal line intersect sides $BC, CA$ and $AB$ at $D, E$ and $J$ respectively such that $D, E$ and $J$ are distinct from $A, B$ and $C$. Then $$\frac{|AJ|}{|JB|}\cdot\frac{|BD|}{|DC|}\cdot\frac{|CE|}{|EA|}=\ldots.$$
+\begin{theorem}[Menelaus] Let $\triangle ABC$ be a triangle, and let a transversal line intersect sides $BC, CA$ and $AB$ at $D, E$ and $J$ respectively such that $D, E$ and $J$ are distinct from $A, B$ and $C$. Then $$\frac{|AJ|}{|JB|}\cdot\frac{|BD|}{|DC|}\cdot\frac{|CE|}{|EA|}=-1.$$
 \end{theorem}
 \begin{definition} Harmonic set...\end{definition}
 \begin{theorem}[Harmonic Ratio] Let $A, F, B$, and $J$ be four points along a line, in that order. This set of points is a harmonic set if and only if $$\frac{|AF|}{|FB|}\cdot\frac{|BJ|}{|JA|}=-1.$$\end{theorem}
-\begin{theorem}[Star Trek Lemma]
-\end{theorem}
+\begin{lemma}[Star Trek]
+\end{lemma}
 \begin{theorem}[Thale] If $A$ is a point on a circle and $B,C$ are the end points of a diameter, then the angle $\angle BAC$ is  a right angle.\end{theorem}
 \begin{lemma}[Carpenter's Lemma]
 \end{lemma}
  \end{document}
  \end
 
+  
   
