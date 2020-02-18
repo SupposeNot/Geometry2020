@@ -1,0 +1,10 @@
+# Ignore all latex intermediary files
+
+*.fls
+*.out
+*.aux
+*.fdb_latexmk
+*.log
+
+# Ignore MACOS desktop metadata
+**/.DS_Store
