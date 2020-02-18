@@ -6,17 +6,15 @@
 \usepackage[margin=1in]{geometry}
 
 \usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
-\usepackage[normalem]{ulem}
 \usepackage{setspace} %used for doublespacing, etc.
 \usepackage{hyperref}
-\usepackage{cancel}
 \usepackage[dvipsnames,usenames]{color}
 \usepackage[all]{xy}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 	\renewcommand{\headrulewidth}{0.5pt} % and the line
 	\headsep=1cm
-	
+
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 %Some useful environments.
@@ -46,7 +44,7 @@
 %Some useful shortcuts for our favorite sets of numbers
 %Note, you can use these WITHOUT entering math mode
 
-\newcommand{\RR}{\ensuremath{\mathbb R}} 
+\newcommand{\RR}{\ensuremath{\mathbb R}}
 \newcommand{\NN}{\ensuremath{\mathbb N}}
 \newcommand{\ZZ}{\ensuremath{\mathbb Z}}
 \newcommand{\QQ}{{\ensuremath\mathbb Q}}
@@ -70,31 +68,8 @@
 \newcommand{\normale}{\trianglelefteq}
 \newcommand{\normal}{\triangleleft}
 
-%Commenting tools --- You can ignore these, but if you have a question about latex and send me your source file, I'll use them to explain stuff to you.
-\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
-\usepackage{soul}
-\definecolor{highlight}{rgb}{1,0.6,0.6}
-\sethlcolor{highlight}
-\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
-\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
-\theoremstyle{mycomment}
-\newtheorem*{acomment}{\color{BrickRed}{Comment}}
-\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} 
-\end{acomment}\noindent}}
-\newcommand{\red}[1]{{\color{BrickRed} #1}}
-\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
-\newcommand{\green}[1]{{\color{OliveGreen}#1}}
-\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
-\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
-\definecolor{OliveGreen}{rgb}{.3,.5,.2}
-\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
-\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
-
 \chead{MATH F305: Geometry Summary Sheet}
 \pagestyle{fancy}
-%Modify these items:
-%\rhead{\emph{Your Full Name Here}}
-%\lhead{\emph{HW \#0 --- 3/14/15}}
 
 
 \begin{document}
@@ -102,7 +77,7 @@
 \thispagestyle{fancy}
 \section{Collected Observations, Basic Notions and Facts}
 \subsection{Absolute Geometry}
-\begin{axiom} A straight line segment can be drawn between any two distinct points.\end{axiom} 
+\begin{axiom} A straight line segment can be drawn between any two distinct points.\end{axiom}
 \begin{axiom} A straight line segment may be extended to a line.\end{axiom}
 \begin{axiom} Given a line segment a circle may be drawn with the segment as radius and one end point at the center.\end{axiom}
 \begin{axiom} All right angles are congruent.\end{axiom}
@@ -113,7 +88,7 @@
 \begin{fact} Parallel lines may be understood as having the same direction vector, as being equidistant from each other at all points, or as not meeting (in 2D).\end{fact}
 \begin{observation} We know of three kinds of perspective drawings of a box... One point, two point, and three point. They are determined by the number of vanishing points the edges of the box have. \end{observation}
 \begin{definition} A \emph{pencil of lines} is a collection of lines that either all pass through the same point or all are parallel to the same line.
-\end{definition} 
+\end{definition}
 
 We should remember the methods discussed in class for constructing boxes or letters using mathematical perspective methods. Anyone willing to write up their favorite way of completing the letter T?
 
@@ -145,7 +120,7 @@ The possible images of a plane are \ldots
 \item[Sum of Lengths] If $A, B, C$ are in that order along a line, then the sum of the directed distance from $A$ to $B$ and the directed distance from $B$ to $C$ equals the directed distance from  $A$ to $C$. In similarity the same thing applies to angles.
 \item[Line Segment Copy] If  a line segment is defined through $A$ and $B$ and $A'$ is a point on a line $l$, then upon a given side of $A'$ on $l$, there is only one point $B'$ such that the line segment given through $A$ and $B$ is congruent to the line segment given by $A'$ and $B'$. In similarity the same thing applies to angles.
 \item[Transitivity of Congruence] If line segment one and two are congruent are congruent and line segment two and three are congruent, then line segment one and three are congruent. In similarity the same thing applies to angles.
-\item[SAS] For two triangles, if two corresponding sides and the angle between them are congruent, then the triangles are congruent. 
+\item[SAS] For two triangles, if two corresponding sides and the angle between them are congruent, then the triangles are congruent.
 \item[SSS] For two triangles, if all three corresponding sides are congruent, then the triangles are congruent.
 \end{description}
 \subsection{Some Euclidean Geometry Theorems}
@@ -155,8 +130,8 @@ The possible images of a plane are \ldots
 \item[Alternate Interior Angles] If a pair of lines is cut by a transversal, then the alternate interior angles are congruent.
 \item[Corresponding Angles - $\square$ 4.1.2] If a pair of parallel lines is cut by a transversal, the corresponding angles are congruent.
 \item[Triangle Angle Sum] The sum of the interior angles of a triangle is a straight angle.
-\item[ASA] For two triangles, if two corresponding angles and the side between them are congruent, then the triangles are congruent. 
-\item[SAA] For two triangles, if two corresponding angles and one of the sides not between them are congruent, then the triangles are congruent. 
+\item[ASA] For two triangles, if two corresponding angles and the side between them are congruent, then the triangles are congruent.
+\item[SAA] For two triangles, if two corresponding angles and one of the sides not between them are congruent, then the triangles are congruent.
 \item[SAS similarity] If $\triangle ABC$ and $\triangle DEF$ such that $\angle ABC\cong\angle DEF$ and $\frac{||AB||}{||DE||}=\frac{||BC||}{||EF||}$ then $\triangle ABC\sim\triangle DEF$.
 \item[AAA$\iff\sim\triangle$]
 \end{description}
@@ -178,6 +153,3 @@ The possible images of a plane are \ldots
 \end{lemma}
  \end{document}
  \end
-
-  
-  
