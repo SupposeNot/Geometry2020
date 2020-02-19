@@ -37,8 +37,9 @@
 \usepackage{pgf,tikz,pgfplots}
 \pgfplotsset{compat=1.15}
 \usepackage{mathrsfs}
-\usetikzlibrary{arrows}
+\usetikzlibrary{arrows, angles, quotes}
 \newcommand{\degre}{\ensuremath{^\circ}}
+\tikzstyle{point}=[circle, fill, inner sep=0pt, minimum size=4pt]
 
 
 %Some useful shortcuts for our favorite sets of numbers
@@ -81,6 +82,7 @@
 \begin{axiom} A straight line segment may be extended to a line.\end{axiom}
 \begin{axiom} Given a line segment a circle may be drawn with the segment as radius and one end point at the center.\end{axiom}
 \begin{axiom} All right angles are congruent.\end{axiom}
+
 \subsection{Observations}
 \begin{observation} Sets of parallel lines converge to a point in an image when they are not parallel to the picture plane. Lines parallel to the picture plane remain parallel.
 \end{observation}
@@ -108,6 +110,7 @@ The possible images of a plane are \ldots
 \end{definition}
 \begin{definition} A \emph{line} is the shortest connection between two points and its infinite extension to both sides.
 \end{definition}
+
 \section{Collected Results}
 \subsection{Euclidean geometry axioms}
 \begin{description}
@@ -123,33 +126,93 @@ The possible images of a plane are \ldots
 \item[SAS] For two triangles, if two corresponding sides and the angle between them are congruent, then the triangles are congruent.
 \item[SSS] For two triangles, if all three corresponding sides are congruent, then the triangles are congruent.
 \end{description}
+
 \subsection{Some Euclidean Geometry Theorems}
 \begin{description}
-\item[Sum of Interior Angles] is two right angles.
-\item[Vertical Opposite Angles] If a line is cut by a transversal, then the vertical angles are congruent.
-\item[Alternate Interior Angles] If a pair of lines is cut by a transversal, then the alternate interior angles are congruent.
-\item[Corresponding Angles - $\square$ 4.1.2] If a pair of parallel lines is cut by a transversal, the corresponding angles are congruent.
-\item[Triangle Angle Sum] The sum of the interior angles of a triangle is a straight angle.
-\item[ASA] For two triangles, if two corresponding angles and the side between them are congruent, then the triangles are congruent.
-\item[SAA] For two triangles, if two corresponding angles and one of the sides not between them are congruent, then the triangles are congruent.
-\item[SAS similarity] If $\triangle ABC$ and $\triangle DEF$ such that $\angle ABC\cong\angle DEF$ and $\frac{||AB||}{||DE||}=\frac{||BC||}{||EF||}$ then $\triangle ABC\sim\triangle DEF$.
-\item[AAA$\iff\sim\triangle$]
+	\item[Sum of Interior Angles] is two right angles.
+	\item[Vertical Opposite Angles] If a line is cut by a transversal, then the vertical angles are congruent.
+	\item[Alternate Interior Angles] If a pair of lines is cut by a transversal, then the alternate interior angles are congruent.
+	\item[Corresponding Angles - $\square$ 4.1.2] If a pair of parallel lines is cut by a transversal, the corresponding angles are congruent.
+	\item[Triangle Angle Sum] The sum of the interior angles of a triangle is a straight angle.
+	\item[ASA] For two triangles, if two corresponding angles and the side between them are congruent, then the triangles are congruent.
+	\item[SAA] For two triangles, if two corresponding angles and one of the sides not between them are congruent, then the triangles are congruent.
+	\item[SAS similarity] If $\triangle ABC$ and $\triangle DEF$ such that $\angle ABC\cong\angle DEF$ and $\frac{||AB||}{||DE||}=\frac{||BC||}{||EF||}$ then $\triangle ABC\sim\triangle DEF$.
+	\item[AAA$\iff\sim\triangle$]
 \end{description}
+\smallskip
+
 \begin{proposition}[$\bigcirc$ 1.1] Suppose we have a viewpoint $A$, a picture plane $\omega$, and a line segment $\ol{AB}$ parallel to the picture plane of length $L$. Then if $d$ is the distance between $A$ and $\omega$, and $D$ the distance between $A$ and the plane containing $AB$, the length of the image $l$ in $\omega$ is $l=\frac{Ld}{D}$.
 \end{proposition}
-\begin{proposition}[$\square$ 2.1] The intersection of two pencils of lines as defined in \S 2 is at most one line.\end{proposition}
+\smallskip
+
+\begin{proposition}[$\square$ 2.1] The intersection of two pencils of lines as defined in \S 2 is at most one line.
+\end{proposition}
+\smallskip
+
 \begin{theorem}[Ceva] Let $\triangle ABC$ be a triangle, and let $D,E$ and $F$ be on the lines $BC, CA$ and $AB$ respectively such that lines $AD, BE$ and $FD$ are concurrent. Then $$\frac{|AF|}{|FB|}\cdot\frac{|BD|}{|DC|}\cdot\frac{|CE|}{|EA|}=1.$$
 \end{theorem}
-\begin{theorem}[Converse of Ceva's Theorem]
+\smallskip
+
+\begin{theorem}[Converse of Ceva's Theorem] Let $\triangle ABC$ be a triangle,
+	and let $D, E,$ and $F$ be on the lines $BC, CA,$ and $AB$ respectively. If
+
+	\begin{equation*}
+		\frac{|AF|}{|FB|} \cdot \frac{|BD|}{|DC|} \cdot \frac{|CE|}{|EA|} = 1
+	\end{equation*}
+
+then the lines $AD, BE,$ and $FC$ are concurrent.
 \end{theorem}
+\smallskip
+
 \begin{theorem}[Menelaus] Let $\triangle ABC$ be a triangle, and let a transversal line intersect sides $BC, CA$ and $AB$ at $D, E$ and $J$ respectively such that $D, E$ and $J$ are distinct from $A, B$ and $C$. Then $$\frac{|AJ|}{|JB|}\cdot\frac{|BD|}{|DC|}\cdot\frac{|CE|}{|EA|}=-1.$$
 \end{theorem}
-\begin{definition} Harmonic set...\end{definition}
-\begin{theorem}[Harmonic Ratio] Let $A, F, B$, and $J$ be four points along a line, in that order. This set of points is a harmonic set if and only if $$\frac{|AF|}{|FB|}\cdot\frac{|BJ|}{|JA|}=-1.$$\end{theorem}
-\begin{lemma}[Star Trek]
+\smallskip
+
+\begin{definition} Let $\triangle ABC$ be a triangle, and let a transversal line
+	intersect sides $BC, CA,$ and $AB$ at $D, E,$ and $J$ respectively such that
+	$D, E,$ and $J$ are distinct from $A, B,$ and $C$. Denote the intersection
+	points by $X = AD \cdot BE$ and $F = CX \cdot AB$. Then we say the points
+	$AFBJ$ form a harmonic set (which we denote by $H(AB, FJ)$).
+
+\end{definition}
+\smallskip
+
+\begin{theorem}[Harmonic Ratio] Let $A, F, B$, and $J$ be four points along a line, in that order. This set of points is a harmonic set if and only if $$\frac{|AF|}{|FB|}\cdot\frac{|BJ|}{|JA|}=-1.$$
+\end{theorem}
+\smallskip
+
+\begin{lemma}[Star Trek] Let $O$ be the center of a circle, and $P, Q$ and $R$
+	be points on the boundary of the circle. Then $\angle QOR = 2 \cdot \angle QPR$.
+
+	\begin{center}
+		\begin{tikzpicture}[scale=1.5]
+			\coordinate (O) at (0,0);
+			\coordinate (P) at (90:1);
+			\coordinate (Q) at (223:1);
+			\coordinate (R) at (355:1);
+
+			\node[point] at (O)[label=above:$O$] {};
+			\node[point] at (P)[label=above:$P$] {};
+			\node[point] at (Q)[label=left:$Q$] {};
+			\node[point] at (R)[label=right:$R$] {};
+
+			\pic [draw, "$2a$", angle eccentricity=0.6] {angle = Q--O--R};
+			\pic [draw, "$a$", angle eccentricity=0.6] {angle = Q--P--R};
+
+			\draw (Q)--(P)--(R)--(O)--cycle;
+
+			\draw (O) circle (1);
+		\end{tikzpicture}
+	\end{center}
 \end{lemma}
-\begin{theorem}[Thale] If $A$ is a point on a circle and $B,C$ are the end points of a diameter, then the angle $\angle BAC$ is  a right angle.\end{theorem}
+\smallskip
+
+\begin{theorem}[Thale] If $A$ is a point on a circle and $B,C$ are the end points of a diameter, then the angle $\angle BAC$ is  a right angle.
+\end{theorem}
+\smallskip
+
 \begin{lemma}[Carpenter's Lemma]
 \end{lemma}
- \end{document}
- \end
+\smallskip
+
+\end{document}
