@@ -214,4 +214,49 @@ then the lines $AD, BE,$ and $FC$ are concurrent.
 \begin{lemma}[Carpenter's Lemma] A point $P$ forms a right angle $\angle APB$ with a line segment $\ol{AB}$ iff $P$ is a point on the circle with $\ol{AB}$ as its diameter (other than $A$ or $B$).\end{lemma}
 \smallskip
 
+\section{Extended Euclidean Space}
+
+\begin{definition} 
+For a line $\ell \subset \RR^2$, the set of all lines parallel to $\ell$ is $[\! [\ell]\!]$. Furthermore,  $P_{[\![\ell]\!]}$ is the ideal point of $\ell$. (An ideal point brings something into $\EE^2$ that does not exist in $\RR^2$ e.g. a vanishing point).
+\end{definition}
+\smallskip
+
+\begin{definition}
+The extended plane $\EE^2$, consists of all the points in the Euclidean plane $\RR^2$ along with the collection of ideal points corresponding to collections of parallel lines in $\RR^2$ such that,
+\begin{itemize}
+\item Elements of $\EE^2$ are either ordinary points $P\in \RR^2$, or ideal points $P_{[\![\ell]\!]}$.
+\item A line in $\EE^2$ is either \textbf{the} ideal line $\ell_{\infty}$ (the union of all ideal points) or an ordinary line (obtained by the union of the points of a Euclidean line and the ideal point of that Euclidean line).
+\end{itemize}
+\end{definition}
+\smallskip
+
+\noindent\textbf{Observations of lines and points in $\EE^2$.}
+
+\begin{itemize}
+\item The intersection of any two distinct lines $\ell,k$ in $\EE^2$ is \textbf{always} one point. 
+\begin{itemize}
+\item If parallel in $\RR^2$, they will intersect at only $P_{[\![\ell,k]\!]}$.
+\item If not parallel in $\RR^2$, they will intersect at a point $P_{\ell,k}$ in $\RR^2$
+\item The intersection between the ideal line and any other line is exactly one ideal point.
+\end{itemize}
+ \item Every pair of distinct points $P$ and $Q$ in $\EE^2$ determine \textbf{exactly} one line.
+ \end{itemize}
+\smallskip
+
+\begin{definition} 
+For a plane $\alpha \subset \RR^3$, the set of all planes parallel to $\alpha$ is $[\! [\alpha]\!]$. Furthermore,  $\ell_{[\![\alpha]\!]}$ is the ideal line of $\alpha$. Note that $\ell_{[\![\alpha]\!]}$ is a collection of ideal points.
+\end{definition}
+\smallskip
+
+\begin{definition}
+Extended space, $\EE^3$, is composed of all the points in $\RR^3$ along with the collection of all the ideal points associated with the lines in $\RR^3$ such that,
+\begin{itemize}
+\item Elements of $\EE^3$ are either ordinary points or ideal points.
+\item Lines in $\EE^3$ are either ordinary lines or ideal lines (recall ordinary lines include the ideal point of the corresponding Euclidean line). 
+\item A plane in $\EE^3$ is either \textbf{the} ideal plane $\alpha_{\infty}$ or the union of a Euclidean plane and the points in the ideal line of that plane.
+\end{itemize}
+\end{definition}
+
+
+
 \end{document}
