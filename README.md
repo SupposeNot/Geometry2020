@@ -17,7 +17,7 @@ git config --global user.email "Your E-Mail"
 5. Commit with usefull message `git commit -m "Added Section 1.1"`
 6. Push your changes to the repository `git push`
 
-#### Helpful Tip
+#### Helpful Tips
 1. Use tab to autofill file names
 2. If you get stuck in VIM press escape key and type `:q`
 3. Read the error messages. Git will tell you what to do
