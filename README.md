@@ -14,7 +14,7 @@ git config --global user.email "Your E-Mail"
 2. Pull latest changes to repository `git pull`
 3. Make changes to the tex file
 4. Add changes to the commit `git add Summary\ of\ Geometry.tex`
-5. Commit with usefull message `git commit -m "Added Section 1.1"`
+5. Commit with useful message `git commit -m "Added Section 1.1"`
 6. Push your changes to the repository `git push`
 
 #### Helpful Tips
