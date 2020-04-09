@@ -280,6 +280,30 @@ Extended space, $\EE^3$, is composed of all the points in $\RR^3$ along with the
 A \emph{mesh} $\mathcal{M}=\{P_1,\mathellipsis,P_k,\ell_1,\mathellipsis,\ell_n \}$ is a collection of points and line in $\EE^3$ such that every point in $\mathcal{M}$ is incident with at least two lines in $\mathcal{M}$ and every line in $\mathcal{M}$ is incident with at least two points in $\mathcal{M}$.
 \end{definition}
 
+\begin{definition}
+Suppose $\mathcal{M}_1$ and $\mathcal{M}_2$ are two collections of points and lines in $\EE^3$, each of them planar. We say $\mathcal{M}_1$ and $\mathcal{M}_2$ are perspective from a point if there is a point $O$ (called the center) and a one-to-one correspondence between the points of $\mathcal{M}_1$ and $\mathcal{M}_2$ such that each of the lines through the corresponding points is incident with $O$.
+\end{definition}
+
+\begin{definition}
+Suppose $\mathcal{M}_1$ and $\mathcal{M}_2$ are two collections of points and lines in $\EE^3$, each of them planar. We say $\mathcal{M}_1$ and $\mathcal{M}_2$ are perspective from a line if there is a line $o$ (called the axis) and a one-to-one correspondence between the lines of $\mathcal{M}_1$ and $\mathcal{M}_2$ so that each of the intersections of corresponding lines is incident with the line $o$. 
+\end{definition}
+
+\begin{theorem}[Desargue's Theorem and Converse] Two triangles in $\EE^3$ are perspective from a line if and only if they are perspective from a point.
+\end{theorem}
+
+\begin{definition}
+A Perspective Collineation is a function $h: \omega \to \omega'$ between planes $\omega, \omega' \subset \EE^3$ (possibly the same plane) that takes points to points and lines to lines, satisfying both of these conditions:\\
+\indent there exists a point $O \in \EE^3$ (called the center) such that $O$, $P$, and $h(P)$ are collinear for every point $P \in \omega$, and\\
+\indent there exists a line $o \subset \omega \cdot \omega'$ (called the axis) such that $o, l,$ and $h(l)$ are coincident for every line $l \subset \omega$.\\
+If $h(O) \in o$, then we say $h$ is an elation; otherwise $h$ is a homology. We say the collineation fixes a point $P$ or a line $l$ (or that $P$ or $l$ is fixed) if $h(P)=P$ or $h(l)=l$.
+\end{definition}
+
+\begin{theorem}[Three Points Theorem] A perspective collineation is determined by three points (non-collinear) and their images.
+\end{theorem}
+
+\begin{theorem}[Center-Axis-Point Theorem]A perspective collineation is determined by its center, its axis, and a point not on the axis together with its image. 
+\end{theorem}
+
 
 
 \end{document}
